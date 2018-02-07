@@ -1,4 +1,4 @@
-# 수업명
+# ADS04 Android
 
 ## 수업 내용
 
@@ -131,7 +131,8 @@ ex) 배터리 부족, SMS 문자메시지 등
 
 - 예제 (출처: http://thereclub.tistory.com/15 [아메리카노 공방])
 
-1.클래스 작성
+
+1. 클래스 작성
 
 ```Java
 public class TestReceiver extends BroadcastReceiver {
@@ -142,7 +143,9 @@ Toast.makeText(context, "Light On !!", Toast.LENGTH_SHORT).show();
 }
 }
 ```
+
 2. manifest에 TestReceiver 등록
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
@@ -162,7 +165,9 @@ Toast.makeText(context, "Light On !!", Toast.LENGTH_SHORT).show();
 
 </manifest>
 ```
+
 3. 메니페스트에 TestReceiver 등록
+
 ```Java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -178,7 +183,7 @@ sendBroadcast(intent);
 
 ### 동적 설정
 
-- 등록과해제가 자유로움
+- 등록과 해제가 자유로움
 
 1. 동적리시버 생성 및 등록
 
@@ -225,21 +230,21 @@ sendBroadcast(intent);
 
 - FLAG_EXCLUDE_STOPPED_PACKAGES  
 
-앱이 한번이라도 실행됬을때만 리시버가 동작할 수 있도록 해준다.
+    앱이 한번이라도 실행됬을때만 리시버가 동작할 수 있도록 해준다.
 
-API 12 이후로는 이 플래그는 기본으로 설정된다.
+    API 12 이후로는 이 플래그는 기본으로 설정된다.
 
 - FLAG_INCLUDE_STOPPED_PACKAGES
 
-한번도 실해되지 않은 앱이라도 리시버가 동작하게 해준다.
+    한번도 실해되지 않은 앱이라도 리시버가 동작하게 해준다.
 
 - FLAG_RECEIVER_REGISTERD_ONLY
 
-오직 동적리시버만 방송받을 수 있도록 해준다.
+    오직 동적리시버만 방송받을 수 있도록 해준다.
 
 - FLAG_RECEIVER_REPLACE_PENDING
 
-동일한 액션으로 중복해서 방송하는 경우 중복된 방송을 제거해준다.
+    동일한 액션으로 중복해서 방송하는 경우 중복된 방송을 제거해준다.
 
 ### + 인텐트 필터
 
@@ -266,3 +271,4 @@ API 12 이후로는 이 플래그는 기본으로 설정된다.
 
 
 ## Output
+
