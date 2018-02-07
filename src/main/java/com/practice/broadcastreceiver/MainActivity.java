@@ -39,12 +39,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onNewIntent(Intent intent) {
+
         super.onNewIntent(intent);
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
 
         registerReceiver(myReceiver, myReceiver.getIntentFilter());
     }
